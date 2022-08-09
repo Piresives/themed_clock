@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,55 +14,64 @@
     <title>Relógio Digital</title>
 </head>
 <body>
-    <nav>
-        <div id="myNav" class="overlay">
-            <a
-             href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class='bx bxs-x-circle'></i>
-            </a>
+    <header>
+        <nav>
+             <!--Abre Menu Mobile-->
+             <button class="nav-button" onclick="openNav()" >
+                <i class="fa-solid fa-bars fa-2x"></i>
+            </button>
+            <!--Menu Mobile-->
+            <div id="myNav" class="overlay">
+                <!--Fecha Menu Mobile-->
+                <a
+                 href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class='bx bxs-x-circle'></i>
+                </a>
 
-            <div class="overlay-content">
-                <div class="sidebar-top">
-                    <span class="shirnk-btn">
-                        <i class='bx bx-chevron-left'></i>
-                    </span>
-                    <h2 class="hide">Escolha o tema que mais te agrada! 😉</h2>
+                <!--Menu Lateral-->
+                <div class="overlay-content">
+                    <div class="sidebar-top">
+                        <span class="shirnk-btn">
+                            <i class='bx bx-chevron-left'></i>
+                        </span>
+                        <h2 class="hide">Escolha o tema que mais te agrada! 😉</h2>
+                    </div>
+
+                    <!--Botões-->
+                    <div class="sidebar-links">
+                        <div class="container">
+                            <button class="main" id="btn-main">Main</button>
+                            <button class="blue" id="btn-blue">Blue</button>
+                            <button class="orange" id="btn-orange">Orange</button>
+                            <button class="purple" id="btn-purple">Purple</button>
+                            <button class="green" id="btn-green">Green</button>
+                        </div> 
+                    </div>                   
                 </div>
+            </div>
+        </nav>    
+    </header>
 
-                <div class="sidebar-links">
-                    <div class="container">
-                        <button class="main" id="btn-main">Main</button>
-                        <button class="blue" id="btn-blue">Blue</button>
-                        <button class="orange" id="btn-orange">Orange</button>
-                        <button class="purple" id="btn-purple">Purple</button>
-                        <button class="green" id="btn-green">Green</button>
-                    </div> 
-                </div>                   
+    <!--Relógio digital-->
+    <main>
+        <div class="relogio">
+            <div>
+                <span id="horas">00</span>
+                <span class="tempo">Horas</span>
+            </div>
+           
+            <div>
+                <span id="minutos">00</span>
+                <span class="tempo">Minutos</span>
+            </div>
+    
+            <div>
+                <span id="segundos">00</span>
+                <span class="tempo">Segundos</span>
             </div>
         </div>
+    </main>
 
-        <button class="nav-button" onclick="openNav()">
-            <i class="fa-solid fa-bars fa-2x"></i>
-        </button>
-    </nav>
-
-    <div class="relogio">
-        <div>
-            <span id="horas">00</span>
-            <span class="tempo">Horas</span>
-        </div>
-       
-        <div>
-            <span id="minutos">00</span>
-            <span class="tempo">Minutos</span>
-        </div>
-
-        <div>
-            <span id="segundos">00</span>
-            <span class="tempo">Segundos</span>
-        </div>
-    </div>
-
+    <!--JavaScript-->
     <script src="./js/script.js"></script>
-
 </body>
 </html>
