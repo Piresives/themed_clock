@@ -49,14 +49,17 @@ nav::before{
     align-items: center;
 }
 
-.sidebar-top h2{
-    font-family: 'Spartan', sans-serif;
-    padding-left: 0.5rem;
-    font-weight: 600;
-    font-size: 1.15rem;
-    color: #000000;
+.hide{
+  font-family: 'Spartan', sans-serif;
+  margin-bottom: 2rem;
+  padding-left: 0.5rem;
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: #000000;
+  transition: opacity 0s 0s;
 }
 
+/*Botão para esconder menu lateral*/
 .shirnk-btn{
     position: absolute;
     top: 50px;
@@ -87,13 +90,7 @@ nav:hover .shirnk-btn,
     pointer-events: all;
 }
 
-
-/*ajustar com div*/
-.hide{
-    transition: opacity 0s 0s;
-}
-
-/*diminui o menu*/
+/*Menu lateral*/
 body.shirnk nav{
     width: 5.4rem;
 }
@@ -154,17 +151,16 @@ body.shirnk .sidebar-links{
   position: absolute;
   font-family: 'Open Sans', sans-serif;
   color: #ffffff;
-  margin-bottom: 26rem;  
 }
 
 .container button{
   position: relative;
-  margin-bottom: 1.5rem; 
-  font-size: 0.9rem;
-  margin: 18px;
-  height: 53px;
+  margin-bottom: 1.2rem; 
+  font-size: 0.675rem;
+  margin: 13,5px;
+  height: 35px;
   width: 8rem;
-
+  
   cursor: pointer;
   color: #ffffff;
   border: 0;
@@ -173,6 +169,7 @@ body.shirnk .sidebar-links{
   letter-spacing: 2px;
 }
 
+/*Botões*/
 .main{
   background: linear-gradient(120deg, #ccfbff, #ef96c5 );
   transition: all 0.25s ease-in-out;
@@ -229,26 +226,28 @@ body.shirnk .sidebar-links{
     color: #000;
   }
 
-/*Responsividade*/
-@media screen and (min-width: 1024px){
-    .sidebar-top h2{
-        margin-bottom: 1rem;
-    }
-
-    .container button{
-        margin-bottom: 0.5rem; 
-        margin: 13,5px;
-        letter-spacing: 2px;
-        height: 30px;
-        font-size: 0.675rem;
-    }
-
-}
-
+/*Laptops*/
 @media screen and (max-width: 1024px){
     nav{
        width: 7.5rem;
        padding: 1.35rem 0.64rem;
+    }
+
+    .relogio{
+      width: 450px;
+      height: 150px;
+    }
+
+    .relogio div{
+      height: 100px;
+      width: 100px;
+    }
+    .relogio span{
+      font-size: 30px
+    }
+  
+    .relogio span.tempo{
+      font-size: 15px;
     }
 
     .container button{
@@ -272,28 +271,8 @@ body.shirnk .sidebar-links{
     
 }
 
-/*Laptops*/
-@media screen and (max-width: 780px){
-    .relogio{
-      width: 450px;
-      height: 150px;
-    }
-
-    .relogio div{
-      height: 100px;
-      width: 100px;
-    }
-    .relogio span{
-      font-size: 30px
-    }
-  
-    .relogio span.tempo{
-      font-size: 15px;
-    }
-  }
-
 /*Tablets e iPads*/
-  @media screen and (max-width: 680px){
+  @media screen and (max-width: 690px){
     nav{
         width: 4rem;
         padding: 1.35rem 0.64rem;
