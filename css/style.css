@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap');
+
+*, *::before, *::after{
+    padding: 0; margin: 0; box-sizing: border-box; 
+}
+
+body{
+    height: 100vh;
+    background: linear-gradient(120deg, #ccfbff, #ef96c5 );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    position: relative;
+}
+
+nav{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 12rem;
+    padding: 1.8rem 0.85rem;
+
+    color: #fff;
+    background-color: transparent;
+    border: 0;
+    border-radius: 6px;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, .5);
+
+    display: flex;
+    flex-direction: column;
+    transition: width 0.5 ease-in-out;
+}
+
+nav::before{
+    content: '';
+    position: absolute;
+    width: 2rem;
+    height: 100%;
+    top: 0;
+    left: 100%;
+}
+
+.sidebar-top{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-top h2{
+    font-family: 'Spartan', sans-serif;
+    padding-left: 0.5rem;
+    font-weight: 600;
+    font-size: 1.15rem;
+    color: #000000;
+}
+
+.shirnk-btn{
+    position: absolute;
+    top: 50px;
+    height: 27px;
+    padding: 0 0.3rem;
+    background-color: #000000;
+    border-radius:6px;
+    cursor: pointer;
+    right: -2.65rem;
+    transform: translateY(-50%) translateX(-8px);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.shirnk-btn i{
+    line-height: 27px;
+    transition: 0.3s;
+}
+.shirnk-btn:hover{
+    background-color: rgb(41, 162, 87);
+}
+
+nav:hover .shirnk-btn,
+.shirnk-btn.hovered{
+    transform: translateY(-50%) translateX(0px);
+    opacity: 1;
+    pointer-events: all;
+}
+
+
+/*ajustar com div*/
+.hide{
+    transition: opacity 0s 0s;
+}
+
+/*diminui o menu*/
+body.shirnk nav{
+    width: 5.4rem;
+}
+
+body.shirnk .hide{
+    opacity: 0;
+    pointer-events: none;
+    transition-delay: 0s;
+}
+body.shirnk .shirnk-btn{
+    transform: rotate(-180deg);
+}
+
+body.shirnk .sidebar-links{
+    opacity: 0;
+    pointer-events: none;
+    transition-delay: 0s;
+}
+
+/*Relógio*/
+.relogio{
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 550px;
+    height: 200px;
+    font-family: 'Open Sans', sans-serif;
+    background: transparent;
+    border-radius: 3px;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, .5);
+}
+
+.relogio div{
+    height: 170px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: rgba(5, 5, 5, .9);
+    box-shadow: 5px 5px 5px  rgba(0, 0, 0, .7);
+    border-radius: 7px;
+    letter-spacing: 3px;
+}
+
+.relogio span{
+    font-weight: bolder;
+    font-size: 60px;
+}
+
+.relogio span.tempo{
+    font-size: 20px;
+}
+
+.container{
+  position: absolute;
+  font-family: 'Open Sans', sans-serif;
+  color: #ffffff;
+  margin-bottom: 26rem;  
+}
+
+.container button{
+  position: relative;
+  margin-bottom: 1.5rem; 
+  font-size: 0.9rem;
+  margin: 18px;
+  height: 53px;
+  width: 8rem;
+
+  cursor: pointer;
+  color: #ffffff;
+  border: 0;
+  border-radius: 6px;
+  box-shadow: 0px 6px 6px rgba(0, 0, 0, .5);
+  letter-spacing: 2px;
+}
+
+.main{
+  background: linear-gradient(120deg, #ccfbff, #ef96c5 );
+  transition: all 0.25s ease-in-out;
+}
+
+.blue{
+  background:linear-gradient(120deg, #6cd0ff, #1c2e4c );
+  transition: all 0.25s ease-in-out;
+}
+
+.orange{
+  background: linear-gradient(120deg, #ed765e, #fea858 );
+  transition: all 0.25s ease-in-out;
+}
+
+.purple{
+  background: linear-gradient(120deg, #d27bff, #511069 );
+  transition: all 0.25s ease-in-out;
+}
+
+.green{
+  background: linear-gradient(120deg, #23494a, #bfffc7 );
+  transition: all 0.25s ease-in-out;
+}
+
+/*Menu Mobile*/
+.nav-button{
+    border: 0;
+    border-radius: 4px;
+    padding: 8px;
+    background-color: #000;
+    opacity: 0;
+  }
+
+  .nav-button i {
+    color: #fff;
+  }
+
+  .overlay-content{
+    position: relative;
+    top: 25%;
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .overlay .closebtn{
+    position: absolute;
+    top: 25px;
+    right: 45px;
+    font-size: 40px;
+    opacity: 0;
+  }
+  .closebtn i{
+    color: #000;
+  }
+
+/*Responsividade*/
+@media screen and (min-width: 1024px){
+    .sidebar-top h2{
+        margin-bottom: 1rem;
+    }
+
+    .container button{
+        margin-bottom: 0.5rem; 
+        margin: 13,5px;
+        letter-spacing: 2px;
+        height: 30px;
+        font-size: 0.675rem;
+    }
+
+}
+
+@media screen and (max-width: 1024px){
+    nav{
+       width: 7.5rem;
+       padding: 1.35rem 0.64rem;
+    }
+
+    .container button{
+        font-size: 0.675rem;
+        margin-bottom: 0.5rem; 
+        margin: 13,5px;
+        height: 30px;
+        width: 4.5rem;
+        letter-spacing: 1px;
+    }
+    .sidebar-top h2{
+        padding-left: 0.1rem;
+        font-weight: 200;
+        font-size: 0.8rem;
+    }
+
+    .shirnk-btn{
+        top: 10px;
+        height: 27px;
+    }
+    
+}
+
+/*Laptops*/
+@media screen and (max-width: 780px){
+    .relogio{
+      width: 450px;
+      height: 150px;
+    }
+
+    .relogio div{
+      height: 100px;
+      width: 100px;
+    }
+    .relogio span{
+      font-size: 30px
+    }
+  
+    .relogio span.tempo{
+      font-size: 15px;
+    }
+  }
+
+/*Tablets e iPads*/
+  @media screen and (max-width: 680px){
+    nav{
+        width: 4rem;
+        padding: 1.35rem 0.64rem;
+     }
+
+     .relogio{
+        width: 275px;
+        height: 100px;
+      }
+    
+      .relogio div{
+        height: 85px;
+        width: 75px;
+      }
+      .relogio span{
+        font-size: 30px
+      }
+    
+      .relogio span.tempo{
+        font-size: 10px;
+      }
+
+    .nav-button {
+    cursor: pointer;
+    opacity: 1;
+  }
+
+  .overlay{
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(120deg, #ccfbff, #ef96c5 );
+    z-index: 10;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow-x: hidden;
+    transition: all 0.5s;
+  }
+
+  .overlay .closebtn{
+    opacity: 1;
+  }
+
+  .overlay-content{
+    align-items: center;
+  }
+
+  .sidebar-top h2{
+    margin-left: 30%;
+  }
+
+  .container{
+    margin-left: 40%;
+  }
+ 
+  .container button{
+    display: block;
+  }  
+}
+
+/*Smartphone*/
+@media screen and (max-width: 480px){
+
+    nav{
+        width: 3rem;
+    }
+
+    .relogio{
+        margin-left: 15%;
+        width: 260px;
+        height: 90px;
+      }
+  
+      .relogio div{
+        height: 70px;
+        width: 70px;
+      }
+      .relogio span{
+        font-size: 25px
+      }
+    
+      .relogio span.tempo{
+        font-size: 8px;
+      }
+
+    .nav-button{
+        padding: 1px;
+        box-shadow: 0px 3px 3px rgba(0, 0, 0, .5);
+      }
+   
+    .sidebar-top h2{
+        margin-left: 18%;
+      }
+    
+      .container{
+        margin-left: 30%;
+      }
+}
