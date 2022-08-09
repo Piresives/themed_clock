@@ -201,7 +201,7 @@ body.shirnk .sidebar-links{
     border-radius: 4px;
     padding: 8px;
     background-color: #000;
-    opacity: 0;
+    opacity:0;
   }
 
   .nav-button i {
@@ -258,116 +258,129 @@ body.shirnk .sidebar-links{
         width: 4.5rem;
         letter-spacing: 1px;
     }
-    .sidebar-top h2{
-        padding-left: 0.1rem;
-        font-weight: 200;
-        font-size: 0.8rem;
-    }
 
-    .shirnk-btn{
-        top: 10px;
-        height: 27px;
+    .hide{
+      font-weight: 200;
+      padding-left: 0.1rem;
+      font-size: 0.8rem;
     }
-    
 }
 
 /*Tablets e iPads*/
   @media screen and (max-width: 690px){
-    nav{
-        width: 4rem;
-        padding: 1.35rem 0.64rem;
-     }
+   nav{
+     width: 4rem;
+     padding: 1.35rem 0.64rem;
+    }
 
-     .relogio{
-        width: 275px;
-        height: 100px;
-      }
+   .relogio{
+      width: 275px;
+      height: 100px;
+    }
     
-      .relogio div{
-        height: 85px;
-        width: 75px;
-      }
-      .relogio span{
-        font-size: 30px
-      }
+    .relogio div{
+      height: 85px;
+      width: 75px;
+    }
+    .relogio span{
+      font-size: 30px
+    }
     
-      .relogio span.tempo{
-        font-size: 10px;
-      }
+    .relogio span.tempo{
+      font-size: 10px;
+    }
 
     .nav-button {
-    cursor: pointer;
-    opacity: 1;
-  }
+      cursor: pointer;
+      opacity: 1;
+    }
 
-  .overlay{
-    width: 0%;
-    height: 100%;
-    background: linear-gradient(120deg, #ccfbff, #ef96c5 );
-    z-index: 10;
-    position: fixed;
-    left: 0;
-    top: 0;
-    overflow-x: hidden;
-    transition: all 0.5s;
-  }
+    .overlay{
+      width: 0%;
+      height: 100%;
+      background: linear-gradient(120deg, #ccfbff, #ef96c5 );
+      z-index: 10;
+      position: fixed;
+      left: 0;
+      top: 0;
+      overflow-x: hidden;
+      transition: all 0.5s;
+    }
 
-  .overlay .closebtn{
-    opacity: 1;
-  }
+    .overlay .closebtn{
+      opacity: 1;
+    }
 
-  .overlay-content{
-    align-items: center;
-  }
+    .overlay-content{
+      align-items: center;
+    }
 
-  .sidebar-top h2{
-    margin-left: 30%;
-  }
+    .hide{
+      margin-left: 30%;
+    }
 
-  .container{
-    margin-left: 40%;
-  }
+    .container{
+      margin-left: 40%;
+    }
  
-  .container button{
-    display: block;
-  }  
+    .container button{
+      display: block;
+    }  
 }
 
 /*Smartphone*/
 @media screen and (max-width: 480px){
 
     nav{
-        width: 3rem;
+      width: 3rem;
     }
 
     .relogio{
-        margin-left: 15%;
-        width: 260px;
-        height: 90px;
-      }
+      margin-left: 15%;
+      width: 300px;
+      height: 110px;
+    }
   
-      .relogio div{
-        height: 70px;
-        width: 70px;
-      }
-      .relogio span{
-        font-size: 25px
-      }
+    .relogio div{
+      height: 80px;
+      width: 80px;
+    }
+    .relogio span{
+      font-size: 30px
+    }
     
-      .relogio span.tempo{
-        font-size: 8px;
-      }
+    .relogio span.tempo{
+      font-size: 10px;
+    }
 
     .nav-button{
-        padding: 1px;
-        box-shadow: 0px 3px 3px rgba(0, 0, 0, .5);
-      }
+      padding: 1px;
+      box-shadow: 0px 3px 3px rgba(0, 0, 0, .5);
+    }
    
-    .sidebar-top h2{
-        margin-left: 18%;
-      }
+    .hide{
+      font-weight: bold;
+      margin-left: 25%;
+    }
     
-      .container{
-        margin-left: 30%;
-      }
+    .container{
+      margin-left: 40%;
+    }
+}
+
+@media  screen and (max-height: 414px){
+  nav{
+    width: 6rem;
+  }
+
+  .hide{
+    font-weight: bold;
+  }
+  .container button{
+    margin-bottom: 0.3rem;
+    height: 22.5px;
+    width: 3.5rem;
+    letter-spacing: 2px;
+  }
+
 }
